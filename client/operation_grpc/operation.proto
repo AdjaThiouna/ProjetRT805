@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option go_package="rt0805/client/operation_grpc";
+
+message Request{
+    string DeviceName= 1;
+    string Operations = 2;
+
+}
+
+message Response{}
+
+service OpService{
+    rpc CreateOp (Request) returns (Response);
+}
